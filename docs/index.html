@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ticalc.link</title>
+    <title>ticalc.link | TI-84 File Transfer</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon.ico">
-    <script type="text/javascript" src="index.js"></script>
+    
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KKHH0F88Y4"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -17,24 +17,67 @@
   </head>
   <body>
     <main>
-      <section id="flow">
-        <h1>ticalc.link</h1>
-        <p>Send a file to your calculator over USB from right here in your web browser.</p>
+      <section id="flow" class="active">
+        <header>
+          <h1>ticalc.link</h1>
+          <p>Transfer .8xp and .8xv files to your calculator via USB.</p>
+        </header>
+
         <section class="buttons">
-          <button id="connect" class="active"><span>1</span> Select calculator</button>
-          <button id="upload"><span>2</span> Select file</button>
-          <button id="start"><span>3</span> Send it!</button>
+          <button id="connect" class="active">
+            <span class="step-num">1</span> 
+            <div class="btn-text">
+              <strong>Select Calculator</strong>
+              <small>Pair your device via USB</small>
+            </div>
+          </button>
+
+          <button id="upload">
+            <span class="step-num">2</span> 
+            <div class="btn-text">
+              <strong>Select File</strong>
+              <small>Choose a program or variable</small>
+            </div>
+          </button>
+
+          <button id="start">
+            <span class="step-num">3</span> 
+            <div class="btn-text">
+              <strong>Send to TI-84</strong>
+              <small>Start the transfer process</small>
+            </div>
+          </button>
         </section>
-        <p>Currently supported: <span id="supported"></span></p>
+
+        <div class="status-bar">
+          <p>Supported Models: <span id="supported">TI-84 Plus CE, TI-83 Premium CE</span></p>
+        </div>
       </section>
+
       <section id="incompatible">
-        <h1>ticalc.link</h1>
-        <p>Sorry, this web browser does not support WebUSB. Please try using a different web browser!</p>
+        <h1>Incompatible Browser</h1>
+        <p>This browser does not support <strong>WebUSB</strong>. Please try Chrome or Edge on your Chromebook or PC.</p>
       </section>
     </main>
+
     <footer>
       <p>
-        This website is still very experimental.
+        Experimental tool. <a href="https://github.com/Timendus/ticalc.link/issues">Report Issues</a> | 
+        <a href="https://github.com/Timendus/ticalc.link">Source Code</a>
+      </p>
+    </footer>
+
+    <section id="popup">
+      <div id="content">
+        <h2></h2>
+        <p></p>
+        <div class="buttons"></div>
+      </div>
+    </section>
+
+    <script type="text/javascript" src="index.js"></script>
+  </body>
+                               </html>        This website is still very experimental.
         It comes with absolutely no guarantees.
         So be warned, and please <a href="https://github.com/Timendus/ticalc.link/issues">report any issues</a>.
         It is Open Source, and can be found <a href="https://github.com/Timendus/ticalc.link">on Github</a>.
